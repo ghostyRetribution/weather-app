@@ -57,13 +57,15 @@ ul {
 span {
 	font-size: 8rem;
 	border-right: 2px solid white;
-	padding-right: 50px;
+	padding-right: 1em;
 	position: relative;
 }
 
-span p {
+p {
 	font-size: 2rem;
 	position: absolute;
-	top: 5%;
-	right: 15%;
+	top: 50%;
+	right: 60%;
+	margin: 0;
+	padding: 0;
 }
