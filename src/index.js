@@ -13,10 +13,19 @@ function main() {
 			.then((response) => {
 				document.getElementById('weather-condition').textContent = response.currentConditions.conditions;
 				document.getElementById('city').textContent = city.toUpperCase();
-				document.getElementById('temperature').innerHTML = `${response.currentConditions.temp} <p>&degC</p>`;
+				document.getElementById('temperature').innerHTML = `${response.currentConditions.temp}<p>&degC</p>`;
 				document.getElementById('feel').textContent = `Feels like: ${response.currentConditions.feelslike}°C`;
 				document.getElementById('wind').textContent = `Wind: ${response.currentConditions.windspeed} Km/h`;
 				document.getElementById('humidity').textContent = `Humidity: ${response.currentConditions.humidity}%`;
+			})
+			.catch(() => {
+				const errorDisplay = document.createElement('div');
+				errorDisplay.classList.add('error-display');
+				errorDisplay.textContent = 'ERROR Please check your internet connection and search a valid city';
+				document.querySelector('body').appendChild(errorDisplay);
+				errorDisplay.addEventListener('click', () => {
+					errorDisplay.style.display = 'none';
+				});
 			});
 	}
 }
