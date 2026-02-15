@@ -13,8 +13,8 @@ function main() {
 			.then((response) => {
 				document.getElementById('weather-condition').textContent = response.currentConditions.conditions;
 				document.getElementById('city').textContent = city.toUpperCase();
-				document.getElementById('temperature').textContent = response.currentConditions.temp;
-				document.getElementById('feel').textContent = `Feels like: ${response.currentConditions.feelslike}`;
+				document.getElementById('temperature').innerHTML = `${response.currentConditions.temp} <p>&degC</p>`;
+				document.getElementById('feel').textContent = `Feels like: ${response.currentConditions.feelslike}°C`;
 				document.getElementById('wind').textContent = `Wind: ${response.currentConditions.windspeed} Km/h`;
 				document.getElementById('humidity').textContent = `Humidity: ${response.currentConditions.humidity}%`;
 			});

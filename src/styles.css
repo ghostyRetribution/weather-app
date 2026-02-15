@@ -1,16 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
 	color: white;
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-family: 'Roboto' ,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 body {
 	background-color: rgb(5, 5, 24);
 	height: 100vh;
-	/* display: flex;
-	align-items: center;
-	justify-content: center; */
 	position: relative;
 }
 
@@ -20,7 +19,6 @@ main {
 	position: absolute;
 	top: 30%;
 	left: 20%;
-	/* font-size: 2.5rem; */
 	gap: 0.5em;
 }
 
@@ -45,8 +43,29 @@ input {
 
 #bottom-section {
 	display: flex;
-	align-items: center;
-	gap: 2em;
+    align-items: center;
+    gap: 3rem; 
+    margin-top: 1rem;
+}
+
+#temperature {
+	display: flex;
+    align-items: flex-start; 
+    min-width: 1.5em; 
+    font-size: 8rem;
+    position: relative;
+}
+
+#temperature p {
+	font-size: 2rem;
+    margin-top: 1rem; 
+    margin-left: 5px;
+}
+
+#divider {
+	width: 2px;
+	height: 9em;
+	background-color: white;
 }
 
 ul {
@@ -54,18 +73,17 @@ ul {
 	font-size: 2rem;
 }
 
-span {
-	font-size: 8rem;
-	border-right: 2px solid white;
-	padding-right: 1em;
-	position: relative;
+ul li {
+	margin-bottom: 15px;
 }
 
-p {
-	font-size: 2rem;
-	position: absolute;
-	top: 50%;
-	right: 60%;
-	margin: 0;
-	padding: 0;
+.error-display {
+	z-index: 10;
+	width: 100vw;
+	height: 100vh;
+	opacity: 92%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
 }
